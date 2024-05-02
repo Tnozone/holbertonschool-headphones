@@ -327,44 +327,51 @@ main section:nth-child(1) header ul img {
   padding: 100px 0;
 }
     
-    .what_we_do .disc {
+    .what_we_do .disc,
+    .results .disc {
         display: flex;
         justify-content: center;
         margin-bottom: 50px;
     }
     
-    .what_we_do .disc div {
+    .what_we_do .disc div,
+    .results .disc div {
         max-width: 630px;
         text-align: center;
         color: var(--color-near-black);
     }
     
-    .what_we_do .disc h2 {
+    .what_we_do .disc h2,
+    .results .disc h2 {
         font-size: 32px;
         margin: 0 0 30px 0;
         font-weight: 600;
     }
     
-    .what_we_do .disc p {
+    .what_we_do .disc p,
+    .results .disc p {
         font-size: var(--font-size-mid);
         padding: 10px;
     }
     
-    .what_we_do .row {
+    .what_we_do .row,
+    .results .row {
         display: flex;
         justify-content: space-between;
         margin: 0 200px;
         flex-wrap: wrap;
     }
     
-    .what_we_do .row .card {
+    .what_we_do .row .card,
+    .results .row .card {
         width: 200px;
         text-align: center;
         color: var(--color-near-black);
         display: inline-block;
     }
     
-    .what_we_do .row .card span {
+    .what_we_do .row .card span, 
+    .results .row .card span {
         color: var(--color-rose);
         font-size: 94px;
     }
@@ -374,20 +381,43 @@ main section:nth-child(1) header ul img {
         font-weight: 600;
         margin: 20px 0;
     }
+
+    .what_we_do .row .card p,
+    .results .row .card p {
+      font-size: var(--font-size-small);
+    }
     
     @media (max-width: 767px) {
-        .what_we_do .row {
+        .what_we_do .row,
+        .results .row {
             margin: 0 100px;
         }
     
-        .what_we_do .row .card {
+        .what_we_do .row .card,
+        .results .row .card {
             margin: 30px 0;
         }
     }
     
     @media (max-width: 480px) {
-        .what_we_do .row {
+        .what_we_do .row
+        .results .row {
             margin: 0 20px;
             justify-content: center;
         }
     }
+
+/* Section results
+      ============================= */
+
+.results {
+  background: url(./images/headphones_hero_2.jpg);
+  color: var(--color-white);
+  padding: 100px 0;
+}
+
+.results .row .card h3 {
+  font-size: 46px;
+  font-weight: bold;
+  margin: 0 0 30px 0;
+}

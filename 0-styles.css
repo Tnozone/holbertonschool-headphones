@@ -5,8 +5,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   list-style-type: none;
+  list-style: none;
   text-decoration: none;
   color: inherit;
 }
@@ -17,6 +17,7 @@
 
 :root {
     --color-white: #fff;
+    --color-black: #000;
     --color-rose: #FF6565;
     --color-dark-red: #a44040;
 
@@ -28,11 +29,6 @@
     --font-size-large: 20px;
     --font-size-mid: 16px;
     --font-size-small: 14px;
-
-    --nav-item-margin: 0 0 0 2rem;
-    --nav-item-font-size: 12px;
-
-    --header-padding: 4rem 0 0;
 }
 
 /* Fonts
@@ -100,10 +96,7 @@
       ============================= */
 
 body {
-    background-image: url('./images/headphones_hero_1.jpg');
-    background-repeat: no-repeat;
-    font-family: var(--font-face);
-    justify-content: center;
+  font-family: source-sans-pro;
 }
 
 a {
@@ -116,173 +109,6 @@ a:hover, a:active {
     cursor: pointer;
 }
 
-  /* Header
-    ============================= */
-
-  .header {
-      padding: 30px 100px;
-      display: flex;
-      align-items: center;
-      color: var(--color-white);
-  }
-  
-  .header .header-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-  }
-  
-  .header-logo img {
-      width: 161px;
-  }
-  
-  .menu-btn {
-      display: none;
-  }
-
-  /* navbar
-    ============================= */
-
-    .navbar-menu {
-      font-size: var(--nav-item-font-size);
-      font-weight: bold;
-      display: flex;
-      flex-direction: row;
-    }
-
-    .nav .nav-item + .nav-item {
-      margin: var(--nav-item-margin);
-    }
-
-  /* menu mobile
-    ============================= */
-    .header .menu-icon {
-      cursor: pointer;
-      padding: 2.5rem;
-      position: relative;
-      user-select: none;
-      display: none;
-    }
-    
-    .header .menu-icon .navicon {
-      background: var(--color-white);
-      display: block;
-      width: 2rem;
-      height: .2rem;
-      position: relative;
-      transition: background .2s ease-out;
-    }
-    
-    .header .menu-icon .navicon:before,
-    .header .menu-icon .navicon:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background: var(--color-white);
-      transition: all .2s ease-out;
-    }
-    
-    .header .menu-icon .navicon:before {
-      top: .7rem;
-    }
-    
-    .header .menu-icon .navicon:after {
-      top: -.7rem;
-    }
-    
-    /* menu btn */
-    
-    .header .menu-btn {
-      display: none;
-    }
-    
-    .menu-btn:checked ~ .navbar-menu {
-      display: block;
-    }
-    
-    .menu-btn:checked ~ .navbar-menu .nav {
-      max-height: 100%;
-      overflow: inherit;
-    }
-    
-    .header .menu-btn:checked ~ .menu-icon .navicon {
-      background: transparent;
-    }
-    
-    .header .menu-btn:checked ~ .menu-icon .navicon:before {
-      transform: rotate(-45deg);
-    }
-    
-    .header .menu-btn:checked ~ .menu-icon .navicon:after {
-      transform: rotate(45deg);
-    }
-    
-    .header .menu-btn:checked ~ .menu-icon .navicon:before,
-    .header .menu-btn:checked ~ .menu-icon .navicon:after {
-      top: 0;
-    }
-    
-    @media only screen and (max-width: 767px) {
-      :root {
-        --header-padding: 2rem 0 0;
-        --nav-item-font-size: var(--font-size-large);
-      }
-    
-      .header-container {
-        flex-wrap: wrap;
-        padding: 0 1.5rem;
-      }
-    
-      .header .menu-icon {
-        display: block;
-      }
-    }
-
-  /*** 3. SECTION ***/
-  
-  /* Section (all styles)
-      ============================= */
-
-/* Section HERO
-      ============================= */
-
-.section-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 350px;
-  text-align: center;
-  color: var(--color-white);
-}
-
-.container-hero {
-  margin: 40px 0;
-  padding: 270px 0;
-}
-
-.container-hero h1 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.container-hero p {
-    font-size: var(--font-size-mid);
-}
-
-.container-hero p:last-child {
-  padding-top: 2.5rem;
-}
-
-.container-hero .subtitle {
-    font-weight: bold;
-    margin-top: 0;
-    padding-bottom: 1rem;
-}
-
 button {
   background-color: var(--color-rose);
   color:#FFF;
@@ -293,33 +119,202 @@ button {
   display: inline-block;
   font-size: var(--font-size-small);
   font-weight: bold;
-  filter: drop-shadow(0 0 0.4rem black);
+  filter: drop-shadow(0 0 0.4rem var(--color-black));
   height: 44px;
   width: 162px;
 }
 
 button:hover {
   background-color: var(--color-dark-red);
+  cursor: pointer;
+}
+
+/* Header styles */
+
+main section:nth-child(1) {
+  background-image: url("./images/headphones_hero_1.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+main section:nth-child(1) header {
+  padding: 30px 200px;
+}
+
+main section:nth-child(1) header ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+main section:nth-child(1) header ul li ul li {
+  margin: 0 50px 0 0;
+}
+
+main section:nth-child(1) header ul li ul li a:hover {
+  color: #ff6565;
+}
+
+main section:nth-child(1) header ul img {
+  width: 161px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.menu-btn:checked ~ .navbar-menu {
+  display: block;
+}
+
+.menu-btn:checked ~ .navbar-menu .nav {
+  max-height: 100%;
+  overflow: inherit;
+}
+
+.menu-btn:checked ~ .navbar-menu .menu-icon .navicon {
+  background: transparent;
+}
+
+.menu-btn:checked ~ .navbar-menu .menu-icon .navicon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.menu-btn:checked ~ .navbar-menu .menu-icon .navicon::after {
+  transform: rotate(45deg);
+  top: 0;
 }
 
 @media (max-width: 767px) {
-  .header {
+  main section:nth-child(1) header {
       padding: 30px 66px;
   }
-  .section-hero {
+
+  main section:nth-child(1) header ul li ul li {
+      margin: 0 30px 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  main section:nth-child(1) header ul {
+      justify-content: center;
+  }
+  .header-logo {
+      padding: 0 50px 0 0;
+  }
+
+  .header .nav {
+      flex-direction: column;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+      padding: 10px 0 0 0;
+  }
+
+  .nav li {
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+  }
+
+  .navbar-menu {
+      flex: 1 100%;
+      display: none;
+  }
+
+  .header .menu-icon {
+      display: block;
+  }
+  .header .menu-icon {
+      cursor: pointer;
+      padding: 12px 0 0 0;
+      position: relative;
+      user-select: none;
+  }
+
+  .header .menu-icon .navicon {
+      background: white;
+      display: block;
+      width: 15px;
+      height: 2px;
+      position: relative;
+      transition: background 0.2s ease-out;
+  }
+
+  .header .menu-icon .navicon::before,
+  .header .menu-icon .navicon::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      position: absolute;
+      background: white;
+      transition: all 0.2s ease-out;
+  }
+
+  .header .menu-icon .navicon::before {
+      top: 0.4rem;
+  }
+
+  .header .menu-icon .navicon::after {
+      top: -0.4rem;
+  }
+}
+
+.main-part {
+  height: 80%;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  color: white;
+  padding: 0 370px;
+  text-align: center;
+}
+
+.main-part h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.main-part .first {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main-part div {
+  display: flex;
+  justify-content: center;
+}
+
+.main-part button {
+  margin: 40px 0 60px 0;
+  width: 160px;
+  height: 44px;
+}
+
+.paragraph {
+  font-size: 16px;
+  color: rgb(201, 201, 201);
+  width: 630px;
+  font-weight: normal;
+}
+
+@media (max-width: 767px) {
+  .main-part {
+      height: 80%;
       padding: 0 66px;
   }
 }
 
 @media (max-width: 480px) {
-  .header {
-      padding: 30px 20px;
-      flex-direction: column;
-  }
-  .header-logo {
-      margin-bottom: 20px;
-  }
-  .section-hero {
+  .main-part {
+      height: 80%;
       padding: 0 9px;
   }
 }

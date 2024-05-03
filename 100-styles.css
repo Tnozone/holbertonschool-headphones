@@ -632,6 +632,14 @@ button:hover, button:active {
   flex-wrap: wrap;
   gap: 10px 20px;
 }
+
+.pentagon-1 {
+	position: relative;
+	width: 190px;
+	height: 190px;
+	background: var(--color-red);
+	clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+}
   
   @media all and (max-width: 767px) {
       #our_results {

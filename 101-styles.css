@@ -598,7 +598,12 @@ button:hover, button:active {
   }
 
   #what_we_do h2 {
-    animation: 3s linear 1s slidein;
+    animation: color 3s infinite alternate;
+  }
+
+  @keyframes color {
+    from {color: var(--color-black);}
+    to {color: var(--color-red);}
   }
 
 /* Our results
@@ -659,6 +664,17 @@ button:hover, button:active {
 	height: 190px;
 	background: var(--color-red);
 	clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+    animation: pentagons 5s ease-in-out infinite alternate;
+    -webkit-animation: pentagons 5s ease-in-out infinite alternate;
+}
+
+@keyframes pentagons {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(2.0);
+    }
 }
   
   @media all and (max-width: 767px) {

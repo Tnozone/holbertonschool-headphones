@@ -194,6 +194,8 @@
     --line-height-big: 1.8;
 
     --letter-spacing: .04rem;
+
+    --hover-opacity: 0.9;
 }
 
   /*** 2. LAYOUT ***/

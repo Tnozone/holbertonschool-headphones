@@ -618,6 +618,18 @@ button:hover, button:active {
       margin: 0;
       width: 100%;
   }
+
+.pentagone-content span {
+    font-size: 40px;
+    font-weight: var(--font-weight-bold);
+}
+
+.pentagon-container {
+  margin: 20px;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
   
   @media all and (max-width: 767px) {
       #our_results {
@@ -629,3 +641,81 @@ button:hover, button:active {
       }
   }
   
+  /* Contact us
+      ============================= */
+  
+  #contact_us form {
+      width: 40%;
+      margin: 1rem 0 3rem 0;
+  }
+  
+  #contact_us form .form-field {
+      margin: 2rem 0;
+      border-bottom: 0.1rem solid var(--color-grey);
+  }
+  
+  #contact_us .form-field label {
+      font-weight: var(--font-weight-bold);
+  }
+  
+  #contact_us .form-field input {
+      border: 0;
+      width: 100%;
+  }
+  
+  @media all and (max-width: 480px) {
+      #contact_us form {
+          width: 90%;
+      }
+  }
+  
+  /*** 4. FOOTER ***/
+  
+  footer {
+      background-color: var(--color-black);
+      padding: 3rem 0 0.6rem 0;
+  }
+  
+  footer .footer__container {
+      display: flex;
+      justify-content: space-between;
+      margin: 3rem 0;
+  }
+  
+  footer p {
+      color: var(--color-white);
+      opacity: 30%;
+  }
+  
+  .footer__social span {
+      color: var(--color-white);
+      font-size: 30px;
+      padding: 0 0.5rem;
+  }
+  
+  .footer__social span:hover {
+      color: var(--color-red);
+  }
+  
+  @media all and (max-width: 767px) {
+      footer {
+          padding: 3rem 3rem 1rem 3rem;
+      }
+  }
+  
+  @media all and (max-width: 480px) {
+      footer .footer__container {
+          margin: 0;
+          padding: 0 3rem;
+          flex-wrap: wrap;
+          justify-content: space-around;
+      }
+  
+      .footer__container .footer__social {
+          padding-top: 2rem;
+      }
+  
+      footer p {
+          padding-top: 1rem;
+      }
+  }

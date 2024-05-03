@@ -6,7 +6,7 @@
     <title>Headphones</title>
     <meta name="description" content="Page for headphones">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="2-styles.css">
+    <link rel="stylesheet" href="3-styles.css">
   </head>
   <body>
     <main>
@@ -23,7 +23,7 @@
                     </li>
                     <input class="menu-btn" type="checkbox" id="menu-btn" />
                     <label class="menu-icon" for="menu-btn">
-                        <span class="navicon"></span>
+                        <span class="navicon holberton_school-icon-menu"></span>
                     </label>
                     <li class="navbar-menu">
                         <ul class="nav">
@@ -34,7 +34,7 @@
                                 <a class="nav-link" href="#results">our results</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">contact us</a>
+                                <a class="nav-link" href="#contact">contact us</a>
                             </li>
                         </ul>
                     </li>
@@ -128,6 +128,40 @@
                     <h3>+2%</h3>
                     <p>Lorem ipsum dolor</p>
                 </div>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Contact us</h2>
+            <div class="container">
+                <form action="#" method="post">
+                    <fieldset>
+                      <legend class="visually-hidden">Your personal information</legend>
+                      <div class="form-group">
+                        <label for="your-first-name">Name</label>
+                        <div class="form-field">
+                          <span class="form-field-container">
+                            <input type="text" name="your-name" id="your-name" pattern="[A-Za-zÀ-ž\s]{3,}"  maxlength="35" autocomplete accesskey="f" required>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="your-email">Email</label>
+                        <div class="form-field">
+                          <span class="form-field-container">
+                            <input type="email" name="your-email" id="your-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="55" autocomplete accesskey="e" required>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="your-message">Your message</label>
+                        <div class="form-field">
+                          <span class="form-field-container">
+                            <input type="text" name="your-message" id="your-message" pattern="[A-Za-zÀ-ž\s]{3,}" minlength="10" autocomplete accesskey="l" required>
+                          </span>
+                        </div>
+                      </div>
+                    </fieldset>
+                <button class="btn">Call to action</button>
             </div>
         </section>
     </main>

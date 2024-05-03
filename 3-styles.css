@@ -1,4 +1,95 @@
 
+@font-face {
+  font-family: 'holberton_school-icon';
+  src:  url('fonts/holberton_school-icon.eot?sq4eq4');
+  src:  url('fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
+    url('fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
+    url('fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
+    url('fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'holberton_school-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.holberton_school-icon-arrow_1:before {
+  content: "\e900";
+}
+.holberton_school-icon-arrow_2:before {
+  content: "\e901";
+}
+.holberton_school-icon-arrow_3:before {
+  content: "\e902";
+}
+.holberton_school-icon-arrow_4:before {
+  content: "\e903";
+}
+.holberton_school-icon-arrow_5:before {
+  content: "\e904";
+}
+.holberton_school-icon-check:before {
+  content: "\e905";
+}
+.holberton_school-icon-ic_bag:before {
+  content: "\e906";
+}
+.holberton_school-icon-ic_cart:before {
+  content: "\e907";
+}
+.holberton_school-icon-ic_facebook:before {
+  content: "\e908";
+}
+.holberton_school-icon-ic_hearing:before {
+  content: "\e909";
+}
+.holberton_school-icon-ic_instagram:before {
+  content: "\e90a";
+}
+.holberton_school-icon-ic_laptop:before {
+  content: "\e90b";
+}
+.holberton_school-icon-ic_money:before {
+  content: "\e90c";
+}
+.holberton_school-icon-ic_music:before {
+  content: "\e90d";
+}
+.holberton_school-icon-ic_sound:before {
+  content: "\e90e";
+}
+.holberton_school-icon-ic_twitter:before {
+  content: "\e90f";
+}
+.holberton_school-icon-ic_video:before {
+  content: "\e910";
+}
+.holberton_school-icon-menu:before {
+  content: "\e911";
+}
+.holberton_school-icon-search_1:before {
+  content: "\e912";
+}
+.holberton_school-icon-search_2:before {
+  content: "\e913";
+}
+.holberton_school-icon-star:before {
+  content: "\e914";
+}
+
 
 /*** 1. GLOBAL ***/
 
@@ -20,6 +111,7 @@
     --color-black: #000;
     --color-rose: #FF6565;
     --color-dark-red: #a44040;
+    --color-near-black: #071629;
 
     --link-hover-color: var(--color-rose);
 
@@ -111,7 +203,7 @@ a:hover, a:active {
 
 button {
   background-color: var(--color-rose);
-  color:#FFF;
+  color: var(--color-white);
   border: none;
   border-radius: 25px;
   padding: 10px 20px;
@@ -119,7 +211,6 @@ button {
   display: inline-block;
   font-size: var(--font-size-small);
   font-weight: bold;
-  filter: drop-shadow(0 0 0.4rem var(--color-black));
   height: 44px;
   width: 162px;
 }
@@ -147,7 +238,7 @@ main section:nth-child(1) header ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  color: white;
+  color: var(--color-white);
   font-weight: bold;
   font-size: 12px;
 }
@@ -157,11 +248,15 @@ main section:nth-child(1) header ul li ul li {
 }
 
 main section:nth-child(1) header ul li ul li a:hover {
-  color: #ff6565;
+  color: var(--color-rose);
 }
 
 main section:nth-child(1) header ul img {
   width: 161px;
+}
+
+main section:nth-child(1) button {
+  filter: drop-shadow(0 0 0.4rem var(--color-black));
 }
 
 .header .menu-btn {
@@ -239,7 +334,7 @@ main section:nth-child(1) header ul img {
   }
 
   .header .menu-icon .navicon {
-      background: white;
+      background: var(--color-white);
       display: block;
       width: 15px;
       height: 2px;
@@ -254,7 +349,7 @@ main section:nth-child(1) header ul img {
       width: 20px;
       height: 2px;
       position: absolute;
-      background: white;
+      background: var(--color-white);
       transition: all 0.2s ease-out;
   }
 
@@ -272,7 +367,7 @@ main section:nth-child(1) header ul img {
   display: flex;
   justify-content: end;
   flex-direction: column;
-  color: white;
+  color: var(--color-white);
   padding: 0 370px;
   text-align: center;
 }
@@ -300,7 +395,6 @@ main section:nth-child(1) header ul img {
 
 .paragraph {
   font-size: 16px;
-  color: rgb(201, 201, 201);
   width: 630px;
   font-weight: normal;
 }
@@ -318,3 +412,167 @@ main section:nth-child(1) header ul img {
       padding: 0 9px;
   }
 }
+
+/* Section what we do
+      ============================= */
+
+.what_we_do {
+  padding: 100px 0;
+  color: var(--color-near-black);
+}
+    
+    .what_we_do .disc,
+    .results .disc {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    
+    .what_we_do .disc div,
+    .results .disc div {
+        max-width: 630px;
+        text-align: center;
+    }
+    
+    .what_we_do .disc h2,
+    .results .disc h2 {
+        font-size: 32px;
+        margin: 0 0 30px 0;
+        font-weight: 600;
+    }
+    
+    .what_we_do .disc p,
+    .results .disc p {
+        font-size: var(--font-size-mid);
+        padding: 10px;
+    }
+    
+    .what_we_do .row,
+    .results .row {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 200px;
+        flex-wrap: wrap;
+    }
+    
+    .what_we_do .row .card {
+        width: 200px;
+        text-align: center;
+        color: var(--color-near-black);
+        display: inline-block;
+    }
+    
+    .what_we_do .row .card span {
+        color: var(--color-rose);
+        font-size: 94px;
+    }
+    
+    .what_we_do .row .card h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 20px 0;
+    }
+
+    .what_we_do .row .card p,
+    .results .row .card p {
+      font-size: var(--font-size-small);
+    }
+    
+    @media (max-width: 767px) {
+        .what_we_do .row,
+        .results .row {
+            margin: 0 100px;
+        }
+    
+        .what_we_do .row .card,
+        .results .row .card {
+            margin: 30px 0;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .what_we_do .row
+        .results .row {
+            margin: 0 20px;
+            justify-content: center;
+        }
+    }
+
+/* Section results
+      ============================= */
+
+.results {
+  background: url(./images/headphones_hero_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color-white);
+  padding: 100px 0;
+}
+
+.results .row .card {
+  background: url(./images/pentagone.png);
+  background-size: cover;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.results .row .card h3 {
+  font-size: 46px;
+  font-weight: bold;
+  margin: 70px 0 20px 0;
+}
+
+/* Section contact
+      ============================= */
+
+.contact {
+  padding: 100px 0;
+  color: var(--color-near-black);
+}
+
+.contact .container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin: 0 0 30px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.form-group {
+  margin-top: 30px;
+}
+
+.container label {
+  font-size: var(--font-size-small);
+  font-weight: 600;
+}
+
+.container fieldset {
+  border: none;
+}
+
+fieldset input {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--color-black);
+  opacity: 0.2;
+}
+
+.form-field-container input {
+  width: 400px;
+}
+
